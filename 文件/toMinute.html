@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style:none;
+        }
+        .toshow{
+            position: relative;
+            width: 1250px;
+            height: 105px;
+        }
+        .toshowbox{
+            float: left;
+            width: 1250px;
+            height: 105px;
+            background: blue;
+        }
+        .boxli{
+            float: left;
+            display: inline-block;
+            overflow: hidden;
+        }
+        .boxli span{
+            float: left;
+        }
+        .boximg1{
+            width: 248px;
+            height: 105px;
+            display: inline-block;
+        }
+        .one{
+            background: url("toshow/toshow.jpg");
+        }
+        .two{
+            background: url("toshow/toshow2.jpg");
+        }
+        .three{
+            background: url("toshow/toshow3.jpg");
+        }
+        .four{
+            background: url("toshow/toshow4.jpg");
+        }
+        .five{
+            background: url("toshow/toshow5.jpg");
+        }
+        .one1{
+            background: url("toshow/toshow1-1.jpg");
+        }
+        .two1{
+            background: url("toshow/toshow2-2.jpg");
+        }
+        .three1{
+            background: url("toshow/toshow3-3.jpg");
+        }
+        .four1{
+            background: url("toshow/toshow4-4.jpg");
+        }
+        .five1{
+            background: url("toshow/toshow5-5.jpg");
+        }
+        .boximg2{
+            display: inline-block;
+            position: relative;
+            margin-top:10px ;
+            /*display: none;*/
+            width: 0;
+            height: 95px;
+        }
+    </style>
+</head>
+<body>
+<div id="toshow" class="toshow">
+    <ul  id="toshowBox" class="toshowBox">
+        <li class="boxli">
+            <span class="boximg1 one"></span>
+            <span class="boximg2 one1"></span>
+        </li>
+        <li class="boxli">
+            <span class="boximg1 two"></span>
+            <span class="boximg2 two1"></span>
+        </li>
+        <li class="boxli">
+                <span class="boximg1 three"></span>
+                <span class="boximg2 three1"></span>
+        </li>
+        <li class="boxli">
+            <span class="boximg1 four"></span>
+            <span class="boximg2 four1"></span>
+        </li>
+        <li class="boxli">
+            <span class="boximg1 five"></span>
+            <span class="boximg2 five1"></span>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="js/utils.js"></script>
+<script src="js/animate.js"></script>
+<script>
+    function toMimute() {
+        var toShowBox = document.getElementById("toshowBox")
+        console.log(toShowBox)
+        var oLis = toShowBox.getElementsByTagName("li")
+        var siblings = []
+        for (var i = 0; i < oLis.length; i++) {
+            oLis[i].onmouseover = function () {
+                var childlast = utils.lastChild(this)
+                siblings = utils.siblings(this)
+                var next=utils.next(this)||utils.pre(this)
+                animate(this,{"width":992},100)
+                animate(childlast, {"width": 744}, 100)
+                for (var i = 0; i < siblings.length; i++) {
+                    animate(siblings[i], {"width": 0}, 100)
+                }
+                animate(next,{"width":248},100)
+            }
+            oLis[i].onmouseout=function(){
+                var childlast = utils.lastChild(this)
+                siblings = utils.siblings(this)
+                var next=utils.next(this)
+                animate(childlast, {"width":0}, 100)
+                animate(this,{"width":248},100)
+                for (var i = 0; i < siblings.length; i++) {
+                    animate(siblings[i], {"width": 248},100)
+                }
+            }
+        }
+    }
+    toMimute();
+</script>
+</html>

@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "微软雅黑", Helvetica, sans-serif;
+
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.divide {
+    position: absolute;
+    top: 6px;
+    right: 0;
+    width: 1px;
+    height: 26px;
+    overflow: hidden;
+    background: #f0f0f0;
+    background: -webkit-linear-gradient(top, rgba(252, 252, 252, 1) 0, rgba(232, 232, 232, 1) 50%, rgba(252, 252, 252, 1) 100%);
+}
+
+.head {
+    width: 100%;
+    position: fixed;
+}
+
+.head .set_head {
+    width: 1244px;
+    margin: 0 auto;
+}
+
+.set_head .head_inner {
+    width: 1244px;
+    height: 70px;
+    background: url("../img/logo.png") no-repeat;
+    background-position: 0px -54px;
+    padding-top: 8.5px;
+}
+
+.set_head .head_inner * {
+    display: inline-block;
+}
+
+.set_head .logo {
+    display: inline-block;
+    background-image: url("../img/logo.png");
+    width: 200px;
+    height: 54px;
+}
+
+.head:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.head:before {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.set_head .ad_inner {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+}
+
+.set_head .ad_inner img {
+    display: inline-block;
+    width: 120px;
+    height: 50px;
+}
+
+.setHead .mod_search {
+    position: absolute;
+    top: 14px;
+    left: 350px;
+    width: 513px;
+    height: 46px;
+}
+
+.set_head .head_search {
+    margin-left: 44px;
+}
+
+.set_head .search_inner {
+    width: 433px;
+    height: 46px;
+    float: left;
+}
+
+.set_head .search_inner .search_ico {
+    position: relative;
+    left: 10px;
+    top: -2px;
+    width: 14px;
+    height: 14px;
+    margin-bottom: -15px;
+    background-image: url("../img/sprite_search.png");
+    -ms-background-position: 0 -206px;
+    background-position: 0 -206px;
+    z-index: 3;
+}
+
+.set_head .search_inner .search_ipt {
+    width: 388px;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 34px;
+    padding-right: 10px;
+    border: 1px solid #cecece;
+    border-right: none;
+    outline: 0;
+    font-size: 14px;
+    font-weight: bold;
+    background: #fafafa;
+    position: relative;
+    top: -20px;
+}
+
+.set_head .search_inner .search_btn {
+    background: #ff5d00 url("../img/sprite_search.png") 0px -108px no-repeat;
+    box-sizing: content-box;
+    position: absolute;
+    width: 85px;
+    height: 46px;
+    border: none;
+    margin-left: 433px;
+    margin-top: -44px;
+    position: relative;
+    top: -55px;
+}
+
+.set_head .quick_history {
+    width: 56px;
+    height: 43px;
+    overflow: visible;
+    margin-left: 210px;
+}
+
+.set_head .quick_history .quick_link {
+    width: 56px;
+    height: 43px;
+}
+
+.set_head .quick_history .quick_link .ico_history {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background: url("../img/sprite_common.png");
+}
+
+.set_head .quick_history .quick_link .quick_txt {
+    display: inline-block;
+    width: 26px;
+    height: 18px;
+    margin-bottom: -5px;
+    text-align: center;
+    color: #b0b0b0;
+    font-family: "微软雅黑", Helvetica, sans-serif;
+    font-size: 8px;
+    font-weight: bold;
+}
+.set_head .head_inner .show{
+    display: none;
+}
+.hoverbox {
+    width: 381px;
+    height: 174px;
+    box-shadow: 0px 0px 1px 1px #e1e1e1;
+    border-top: 3px solid #ff5d00;
+    position: absolute;
+    top: 80px;
+    left: 910px;
+    background: white;
+    overflow: visible;
+    display: none;
+}
+.target{
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #ff5d00;
+    border-left: 3px solid #ff5d00;
+    transform: rotate(45deg);
+    margin-bottom: 30px;
+    margin-left:180px ;
+    margin-top:-9px;
+    background: white;
+}
+.hoverbox .hover_a{
+    display: block;
+    margin-left: 150px;
+}
+.hoverbox .hover_a .hoverinner{
+    background: #ff7b62;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+}
+.hoverbox .hover_p{
+    display: inline-block;
+    font-size: 20px;
+    color: #cecece;
+    margin-left: 80px;
+}
+.set_head .quick_history .quick_link .quick_txt:hover {
+    color: #ff5d00;
+}
+.set_head .quick_history:hover .show{
+  display: block;
+}

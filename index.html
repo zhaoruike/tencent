@@ -1,57 +1,993 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Tencent by zhaoruike</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Tencent</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/zhaoruike/tencent" class="btn">View on GitHub</a>
-      <a href="https://github.com/zhaoruike/tencent/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/zhaoruike/tencent/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <title>腾讯视频</title>
+    <link rel="stylesheet" href="css/tencent.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+</head>
+<body>
+<div id="setlogin" class="set_login">
+    <div class="login_back"></div>
+    <div  id="login" class="login">
+        <span class="close"></span>
+        <span class="close close-change"></span>
+        <div class="login_head">选择账号登录的类型</div>
+        <div class="icon"></div>
+        <div class="select-box">
+            <div  id="qqlogin" class="qqlogin"></div>
+            <div id="wxlogin" class="wxlogin"></div>
+        </div>
+    </div>
+</div>
+<div id="homepage" class="homepage">
+    <div class="heart">
+        <div id="totop" class="totop">
+            <a href="#head">
+                <span class="up"></span>
+            </a>
+        </div>
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <div id="head" class="setHead">
+            <div class="innerHead">
+                <div class="head-inner">
+                    <a href="http://v.qq.com//" title="腾讯视频" class="logo" target="_blank"></a>
+                </div>
+                <div class="ad_inner">
+                    <a href="http://v.qq.com/cover/k/kohkdtsojn1l2kj.html" title="约吧大明星" target="_blank" class="inner">
+                        <img src="img/约吧大明星.png" alt="约吧大明星"/>
+                    </a>
+                </div>
+                <div class="mod_search">
+                    <form action="http://v.qq.com/cover/search.html?pagetype=3" method="get" target="_blank"
+                          name="sform" id="sform" accept-charset="utf-8" class="search_cf">
+                        <div class="search_inner">
+                            <i class="search_ico"></i>
+                            <input type="text" id="iWord" class="search_ipt" name="ms_key" maxlength="40" value="好先生"
+                                   autocomplete="off" placeholder="好先生" x-webkit-speech=""
+                                   x-webkit-grammar="builtin:search"
+                                   lang="zh-CN">
+                            <button class="search_btn" type="submit">
+                                <span></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="quick_history ">
+                    <a href="http://v.qq.com/u/history/" class="quick_link" id="targetHistory" target="_blank">
+                        <i class="ico_history"></i>
+                        <span class="quick_txt">看过</span>
+                        <i class="divide"></i>
+                    </a>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+                    <div class="pop history_pop">
+                        <div class="targetup history_targetup"></div>
+                        <a href="http://v.qq.com/u/history/">
+                            <span class=" btn_txt btn_inner history_btn_txt">登&nbsp;&nbsp;录</span>
+                        </a>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+                        <p class=" inner_txt ">请登陆后查询历史记录</p>
+                    </div>
+                </div>
+                <div class="quick_favorties " id="quick_favorties">
+                    <a href="http://v.qq.com/u/playlist.html" class="quick_link_favorties" id="targetFavorties"
+                       target="_blank">
+                        <i class="ico_favorties"></i>
+                        <span class="quick_txt">看单</span>
+                        <i class="divide"></i>
+                    </a>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+                    <div class="pop favorties_pop">
+                        <div class="targetup favorties_targetup"></div>
+                        <a href="http://v.qq.com/u/history/">
+                            <span class=" btn_txt btn_inner favorties_btn_txt">登&nbsp;&nbsp;录</span>
+                        </a>
 
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+                        <p class=" inner_txt ">请登陆后查询浏览记录</p>
+                    </div>
+                </div>
+                <div class="quick_upload " id="upload">
+                    <a href="http://v.qq.com/u/upload.html" class="quick_link_upload" id="targetUpload" target="_blank">
+                        <i class="ico_upload"></i>
+                        <span class="quick_txt">上传</span>
+                        <i class="divide"></i>
+                    </a>
+                </div>
+                <div class="quick_user" id="quick_user">
+                    <a href="javascript:;" title="未登录" class="quick_user_link">
+                        <img src="img/default_avatar.png" alt="未登录" title="未登录" class="user_img"/>
+                    </a>
+                </div>
+            </div>
+            <div class="head_bottom"></div>
+            <div class="set_navigation navigation_fixed">
+                <div class="navigation_box">
+                    <div class="set_bottom">
+                    </div>
+                    <ul class="navigation_area  navigation_area_first">
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">电视剧</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
 
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/movie" class="link_inner">
+                                <span class="nav_txt">电影</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box nav_bottom_box_2">
+                                <ul class="nav_bottom">
 
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/variety" class="link_inner">
+                                <span class="nav_txt">综艺</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box  nav_bottom_box_2">
+                                <ul class="nav_bottom ">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                    </ul>
+                    <ul class="navigation_area  navigation_area_sec">
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">娱乐</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">音乐</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">演唱会</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/movie" class="link_inner">
+                                <span class="nav_txt">动漫</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box nav_bottom_box_2">
+                                <ul class="nav_bottom">
 
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/variety" class="link_inner">
+                                <span class="nav_txt">游戏</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box  nav_bottom_box_2">
+                                <ul class="nav_bottom ">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                    </ul>
+                    <ul class="navigation_area  navigation_area_sec">
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">VIP影院</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
 
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/movie" class="link_inner">
+                                <span class="nav_txt">美剧</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box nav_bottom_box_2">
+                                <ul class="nav_bottom">
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/zhaoruike/tencent">Tencent</a> is maintained by <a href="https://github.com/zhaoruike">zhaoruike</a>.</span>
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/variety" class="link_inner">
+                                <span class="nav_txt">纪录片</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box  nav_bottom_box_2">
+                                <ul class="nav_bottom ">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                    </ul>
+                    <ul class="navigation_area  navigation_area_sec">
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">新闻</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/movie" class="link_inner">
+                                <span class="nav_txt">时尚</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box nav_bottom_box_2">
+                                <ul class="nav_bottom">
 
-    </section>
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/variety" class="link_inner">
+                                <span class="nav_txt">体育</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box  nav_bottom_box_2">
+                                <ul class="nav_bottom ">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/variety" class="link_inner">
+                                <span class="nav_txt">NBA</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box  nav_bottom_box_2">
+                                <ul class="nav_bottom ">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/variety" class="link_inner">
+                                <span class="nav_txt">汽车</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box  nav_bottom_box_2">
+                                <ul class="nav_bottom ">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                    </ul>
 
-  
-  </body>
+                    <ul class="navigation_area  navigation_area_sec">
+
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/movie" class="link_inner">
+                                <span class="nav_txt">搞笑</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box nav_bottom_box_2">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/variety" class="link_inner">
+                                <span class="nav_txt">微电影</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box  nav_bottom_box_2">
+                                <ul class="nav_bottom ">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">V+</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">拍客</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+
+                        </li>
+
+                    </ul>
+                    <ul class="navigation_area  navigation_area_sec">
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/tv" class="link_inner">
+                                <span class="nav_txt">少儿</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+
+                        </li>
+                        <li class="navigation_li">
+                            <a href="http://v.qq.com/movie" class="link_inner">
+                                <span class="nav_txt">更多</span>
+                            </a>
+                            <span class="nav_sigle"></span>
+                            <box class="nav_bottom_box nav_bottom_box_2">
+                                <ul class="nav_bottom">
+                                    <li class="nav_bottom_inner ">郝先生</li>
+                                    <li class="nav_bottom_inner ">女人不强天不容</li>
+                                    <li class="nav_bottom_inner ">吉祥天宝</li>
+                                    <li class="nav_bottom_inner ">我的奇妙男友</li>
+                                    <li class="nav_bottom_inner ">幸福又见彩虹</li>
+                                    <li class="nav_bottom_inner ">那年我们青春正好</li>
+                                    <li class="nav_bottom_inner ">重生之名流巨星</li>
+                                </ul>
+                            </box>
+                        </li>
+                    </ul>
+                    <ul class="nav_vip_area">
+                        <li class="nav_vip_img"></li>
+                        <a href="http://v.qq.com" class="nav_vip_txt_a">
+                            <span class="nav_vip_txt">VIP会员</span>
+                            <span class="nav_sigle_vip "></span>
+                            <box class="nav_bottom_box nav_bottom_box_vip">
+                                <ul class="nav_bottom   nav_bottom_vip">
+                                    <li class="nav_bottom_inner ">9元开VIP</li>
+                                    <li class="nav_bottom_inner ">VIP特权</li>
+                                    <li class="nav_bottom_inner ">VIP活动</li>
+                                </ul>
+                            </box>
+                        </a>
+
+                        <li class="nav_vip_load"></li>
+                        <a href="http://v.qq.com" class="nav_vip_txt_a nav_vip_txt1">
+                            <span class="nav_vip_txt nav_vip_txt1">下载</span>
+                            <span class="nav_sigle_vip nav_sigle_vip2"></span>
+                            <box class="nav_bottom_box nav_bottom_box_vip2">
+                                <ul class="nav_bottom  nav_bottom_pc">
+                                    <li class="nav_bottom_inner ">PC端</li>
+                                    <li class="nav_bottom_inner ">移动端</li>
+                                    <li class="nav_bottom_inner ">客户端</li>
+                                </ul>
+                            </box>
+                        </a>
+
+                    </ul>
+                    </box>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="lunbotu" class="set_box set_circle">
+            <ul class="set_list set_circle_list">
+                <li class="set_listson set_circle_listson"><img src="imglunbo/吉祥天宝.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/端午节.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/约吧大明星.jpg" alt="" class="circle_img"/>
+                </li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/顿悟.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/郝先生.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/摆脱了.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/深宫一梦.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/似水年华.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/信号.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/宋钟基.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/电影节.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/跑男.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/魔兽.jpg" alt="" class="circle_img"/></li>
+                <li class="set_listson set_circle_listson"><img src="imglunbo/黄消除.jpg" alt="" class="circle_img"/></li>
+            </ul>
+            <div id="select_box1" class="select_box1"></div>
+            <div id="select_box" class="select_box">
+                <div id="select_textbox">
+                    <span class="select_txt  select_ontxt">吉祥天宝</span>
+                    <span class="select_txt ">端午节</span>
+                    <span class="select_txt">约吧大明星</span>
+                    <span class="select_txt">顿悟</span>
+                    <span class="select_txt">郝先生</span>
+                    <span class="select_txt">拜托了冰箱</span>
+                    <span class="select_txt">深宫遗梦</span>
+                    <span class="select_txt">似水年华</span>
+                    <span class="select_txt">信号</span>
+                    <span class="select_txt">宋钟基</span>
+                    <span class="select_txt">电影节</span>
+                    <span class="select_txt">跑男</span>
+                    <span class="select_txt">魔兽</span>
+                    <span class="select_txt">黄小厨</span>
+                </div>
+                <i class=" but prev_but"></i>
+                <ul class="set_list set_circle_select">
+                    <li class="set_listson select_son select_sonon"><img src="imglunbo/samll吉祥天宝.jpg" alt=""
+                                                                         class="select_img"/>
+                    </li>
+                    <li class="set_listson select_son"><img src="imglunbo/samll端午节.jpg" alt="" class="select_img"/></li>
+                    <li class="set_listson select_son"><img src="imglunbo/samll约吧大明星.jpg" alt="" class="select_img"/>
+                    </li>
+                    <li class="set_listson select_son"><img src="imglunbo/samll顿悟.jpg" alt="" class="select_img"/></li>
+                    <li class="set_listson select_son"><img src="imglunbo/small好先生.jpg" alt="" class="select_img"/></li>
+                    <li class="set_listson select_son"><img src="imglunbo/small拜托了并冰箱.jpg" alt="" class="select_img"/>
+                    </li>
+                    <li class="set_listson select_son"><img src="imglunbo/small神功.jpg" alt="" class="select_img"/></li>
+                </ul>
+                <ul class="set_list set_circle_select set_circle_select1">
+                    <li class="set_listson select_son"><img src="imglunbo/似水年华small.jpg" alt="" class="select_img"/>
+                    </li>
+                    <li class="set_listson select_son"><img src="imglunbo/信号small.jpg" alt="" class="select_img"/></li>
+                    <li class="set_listson  select_son"><img src="imglunbo/宋钟基samll.jpg" alt="" class="select_img"/>
+                    </li>
+                    <li class="set_listson select_son"><img src="imglunbo/电影节small.jpg" alt="" class="select_img"/></li>
+                    <li class="set_listson select_son"><img src="imglunbo/跑男small.jpg" alt="" class="select_img"/></li>
+                    <li class="set_listson select_son"><img src="imglunbo/魔兽samll.jpg" alt="" class="select_img"/></li>
+                    <li class="set_listson select_son"><img src="imglunbo/黄消除small.jpg" alt="" class="select_img"/></li>
+                </ul>
+                <i class=" but next_but"></i>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="contain_box">
+                <div class="contain_first">
+                    <div class="contain_title">
+                        <a href="http://v.qq.com/news/">
+                            <h2 class="contain_txt">今日热点</h2>
+                        </a>
+                        <a href="http://v.qq.com/news/">
+                            <span class="contain_txt txt_small">百事渴望就现在，揭盖赢大奖</span>
+                        </a>
+                        <a href="http://v.qq.com/news/">
+                            <span class="contain_txt txt_none">Live Music回归宋仲基见面会</span>
+                        </a>
+                        <a href="http://v.qq.com/cover/3/36cxzdmm6ao1liy.html?vid=r0020lyck8s">
+                    <span class="contain_left">
+                        <span class="contain_img">
+                             <img src="contain/left.jpg" alt=""/>
+                            <span class="go">
+                                <i class="go_inner"></i>
+                            </span>
+                             <span class="txt">
+                                  <p>美国夜总会枪击案致50人死</p>
+                                   <p>事件定性为恐怖袭击</p>
+                             </span>
+                        </span>
+                        </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class=" contain_center">
+                    <div class="center-inner">
+                        <div class="inner_img">
+                            <img src="http://mat1.gtimg.com/v/jasen/jianailiang" alt="" class="imginner"/>
+                        </div>
+                     <span class="inner_text">
+                            恼羞成怒“赶”粉丝下台
+                        </span>
+
+                        <div>
+                            <a href="">
+                                <span class="bottom_inner">贾乃亮跳bigbang舞蹈被虐</span>
+                            </a>
+                        </div>
+                        <div class="bottom_seenum">
+                            <span class="bottom_ico"></span>
+                            <span class="bottom_text">39.3万</span>
+                        </div>
+                    </div>
+                    <div class="center-inner">
+                        <div class="inner_img">
+                            <img src="contain/0.jpg" alt="" class="imginner"/>
+                        </div>
+                     <span class="inner_text">
+                            最贵特效是范爷40万根头发
+                        </span>
+
+                        <div>
+                            <a href="">
+                                <span class="bottom_inner">《爵迹》首支预告超酷炫</span>
+                            </a>
+                        </div>
+                        <div class="bottom_seenum">
+                            <span class="bottom_ico"></span>
+                            <span class="bottom_text">39.3万</span>
+                        </div>
+                    </div>
+                    <div class="center-inner">
+                        <div class="inner_img">
+                            <img src="contain/women.jpg" alt="" class="imginner"/>
+                        </div>
+                     <span class="inner_text">
+                           豪门媳妇都有好福相！
+                        </span>
+
+                        <div>
+                            <a href="">
+                                <span class="bottom_inner">赵薇旺夫千万只因脸有肉？</span>
+                            </a>
+                        </div>
+                        <div class="bottom_seenum">
+                            <span class="bottom_ico"></span>
+                            <span class="bottom_text">39.3万</span>
+                        </div>
+                    </div>
+                    <div class="center-inner">
+                        <div class="inner_img">
+                            <img src="contain/i1465787088_1.jpg" alt="" class="imginner"/>
+                        </div>
+                     <span class="inner_text">
+                            大仙衙门·定档6.17
+                        </span>
+
+                        <div>
+                            <a href="">
+                                <span class="bottom_inner">小狐妖吴倩生扑王传君</span>
+                            </a>
+                        </div>
+                        <div class="bottom_seenum">
+                            <span class="bottom_ico"></span>
+                            <span class="bottom_text">39.3万</span>
+                        </div>
+                    </div>
+                    <div class="center-inner">
+                        <div class="inner_img">
+                            <img src="contain/ball.jpg" alt="" class="imginner"/>
+                        </div>
+                     <span class="inner_text">
+                            总决赛G4微电影
+                        </span>
+
+                        <div>
+                            <a href="">
+                                <span class="bottom_inner">勇士11分逆转夺赛点</span>
+                            </a>
+                        </div>
+                        <div class="bottom_seenum">
+                            <span class="bottom_ico"></span>
+                            <span class="bottom_text">39.3万</span>
+                        </div>
+                    </div>
+                    <div class="center-inner">
+                        <div class="inner_img">
+                            <img src="contain/horse.jpg" alt="" class="imginner"/>
+                        </div>
+                     <span class="inner_text">
+                          呆萌高端大气成新宠
+                        </span>
+
+                        <div>
+                            <a href="">
+                                <span class="bottom_inner">美盲女拥可爱“导盲马”</span>
+                            </a>
+                        </div>
+                        <div class="bottom_seenum">
+                            <span class="bottom_ico"></span>
+                            <span class="bottom_text">39.3万</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="contain_box2">
+                <div class="title">
+                    <a href="">
+                        <span class="txt_small">腾讯出品</span>
+                    </a>
+
+                    <div class="title title1">
+                        <a href="">
+                            <span class="txt_small txt1">广告</span>
+                        </a>
+                    </div>
+                    <div class="inner">
+                        <div class="center-inner center-inner1">
+                            <div class="inner_img">
+                                <img src="contain/黄小厨1.jpg" alt="" class="imginner"/>
+                            </div>
+                     <span class="inner_text">
+                          呆萌高端大气成新宠
+                        </span>
+
+                            <div>
+                                <a href="">
+                                    <span class="bottom_inner">美盲女拥可爱“导盲马”</span>
+                                </a>
+                            </div>
+                            <div class="bottom_seenum">
+                                <span class="bottom_ico"></span>
+                                <span class="bottom_text">39.3万</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner">
+                        <div class="center-inner center-inner1">
+                            <div class="inner_img">
+                                <img src="contain/健康.jpg" alt="" class="imginner"/>
+                            </div>
+                     <span class="inner_text">
+                          呆萌高端大气成新宠
+                        </span>
+
+                            <div>
+                                <a href="">
+                                    <span class="bottom_inner">美盲女拥可爱“导盲马”</span>
+                                </a>
+                            </div>
+                            <div class="bottom_seenum">
+                                <span class="bottom_ico"></span>
+                                <span class="bottom_text">39.3万</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner">
+                        <div class="center-inner center-inner1">
+                            <div class="inner_img">
+                                <img src="contain/幸运.jpg" alt="" class="imginner"/>
+                            </div>
+                     <span class="inner_text">
+                          呆萌高端大气成新宠
+                        </span>
+
+                            <div>
+                                <a href="">
+                                    <span class="bottom_inner">美盲女拥可爱“导盲马”</span>
+                                </a>
+                            </div>
+                            <div class="bottom_seenum">
+                                <span class="bottom_ico"></span>
+                                <span class="bottom_text">39.3万</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner center-inner5">
+                        <div class="center-inner ">
+                            <div class="inner_img">
+                                <img src="contain/作战1.jpg" alt="" class="imginner"/>
+                            </div>
+                     <span class="inner_text">
+                          呆萌高端大气成新宠
+                        </span>
+
+                            <div>
+                                <a href="">
+                                    <span class="bottom_inner">美盲女拥可爱“导盲马”</span>
+                                </a>
+                            </div>
+                            <div class="bottom_seenum">
+                                <span class="bottom_ico"></span>
+                                <span class="bottom_text">39.3万</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner center-inner4">
+                        <div class="center-inner ">
+                            <div class="inner_img">
+                                <img src="contain/小绵羊.jpg" alt="" class="imginner"/>
+                            </div>
+                     <span class="inner_text">
+                          呆萌高端大气成新宠
+                        </span>
+
+                            <div>
+                                <a href="">
+                                    <span class="bottom_inner">美盲女拥可爱“导盲马”</span>
+                                </a>
+                            </div>
+                            <div class="bottom_seenum">
+                                <span class="bottom_ico"></span>
+                                <span class="bottom_text">39.3万</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>奔跑吧兄弟4·全网热播</h2>
+
+                <div class="top"><img src="img/paonanr.jpg" alt=""/>
+                    <a href="" class="bottom_text1 bottom_text">《跑男》更新：邓超再做卧底开启“猎杀”模式</a></div>
+                <div class="right-middle"><img src="img/paonan49.jpg" alt=""/>
+
+                    <div class="middle-right"><a href="">跑男4第9期完整版</a>
+                        <span class="bottom_text bottom_text1">鹿晗模仿宋小宝</span></div>
+                </div>
+                <div class="right-middle"><img src="img/跑男48.jpg" alt=""/>
+
+                    <div class="middle-right">
+                        <a href="" class="middle_a">跑男4第8期完整版</a>
+                        <span class="bottom_text bottom_text1">郑恺遭马粪泼脸</span></div>
+                </div>
+            </div>
+        </div>
+        <div id="toshow" class="toshow">
+            <ul  id="toshowBox" class="toshowBox">
+                <li class="boxli">
+                    <span class="boximg1 one"></span>
+                    <span class="boximg2 one1"></span>
+                </li>
+                <li class="boxli">
+                    <span class="boximg1 two"></span>
+                    <span class="boximg2 two1"></span>
+                </li>
+                <li class="boxli">
+                    <span class="boximg1 three"></span>
+                    <span class="boximg2 three1"></span>
+                </li>
+                <li class="boxli">
+                    <span class="boximg1 four"></span>
+                    <span class="boximg2 four1"></span>
+                </li>
+                <li class="boxli">
+                    <span class="boximg1 five"></span>
+                    <span class="boximg2 five1"></span>
+                </li>
+            </ul>
+        </div>
+        <div id="board1" class="board1">
+            <div class="inner_hear">
+                <h2>热剧周边</h2>
+                <a href="">剧有戏 <i class="divide"></i></a>
+                <a href="">重生周周见  <i class="divide"></i></a>
+                <a href="">泡菜爱上Wasabi <i class="divide"></i></a>
+                <a href="">培根唠美剧 <i class="divide"></i></a>
+                <a href="">欢乐颂剧乐部</a>
+            </div>
+            <div class="left">
+                <div class="left-img">
+                <div class="mark"></div>
+                <img src=""  realsrc="img/middle3/0.jpg" alt=""/>
+                </div>
+                <div class="left-txt">
+                    <h5>青云志·峰峰打戏揭秘</h5>
+                    <p>“功夫仙侠”花絮特辑独家首发 众主演刀光剑影间打得过瘾</p>
+                </div>
+            </div>
+            <div class="inner_middle">
+                <ul>
+                    <li class="lazy">
+                        <span class="contain_img">
+                             <img src="" realsrc="img/middle3/1.jpg" alt=""/>
+                        </span>
+                        <span class="lazy-bottom">已经更新至第1集</span>
+                        <a href="" >六扇门[6.20首播]</a>
+                        <p>林峯应昊茗爆笑断背情</p>
+                    </li>
+                    <li class="lazy">
+                        <span class="contain_img">
+                             <img src="" realsrc="img/middle3/2.jpg" alt=""/>
+                        </span>
+                        <span class="lazy-bottom">已经更新至第1集</span>
+                        <a href="" >吉祥天宝·病毒视频</a>
+                        <p>古装剧吃西餐？小骨用刀叉</p>
+                    </li>
+                    <li class="lazy">
+                        <span class="contain_img">
+                             <img src="" realsrc="img/middle3/3.jpg" alt=""/>
+                        </span>
+                        <span class="lazy-bottom">已经更新至第1集</span>
+                        <a href="" >女强·周边视频</a>
+                        <p>拼命女&凤凰男的逆袭史</p>
+                    </li>
+                    <li class="lazy">
+                        <span class="contain_img">
+                             <img src="" realsrc="img/middle3/4.jpg" alt=""/>
+                        </span>
+                        <span class="lazy-bottom">已经更新至第1集</span>
+                        <a href="" >泡菜爱上Wasabi</a>
+                        <p>张根硕生吞毒蛇喝泥水</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="set_foot">
+    <div class="foot">
+        <ul id="link" class="link">
+            <li class="link_li">
+                <h4>热门频道</h4>
+            </li>
+            <li  class="link_li">
+                <h4>特色推荐</h4>
+            </li>
+            <li  class="link_li">
+                <h4>软件下载</h4>
+            </li>
+            <li  class="link_li">
+                <h4>服务</h4>
+            </li>
+        </ul>
+    </div>
+
+</div>
+</div>
+</body>
+<script type="text/javascript" src="js/utils.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/animate.js" charset="utf-8"></script>
+<script type="text/javascript" src="js/tenjs.js" charset="utf-8"></script>
+<script>
+    tools.lunbotu();
+    tools.toMinute();
+    tools.headSH();
+    tools.toHead();
+    tools.dataBind();
+    tools.login();
+</script>
 </html>
