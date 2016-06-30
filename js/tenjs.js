@@ -220,24 +220,26 @@ var tools = (function () {
         var oLis = utils.getChildren(link, 'li')
         var data = null
         var xhr = new XMLHttpRequest();
-        xhr.open("get", "data/json", false)
+        xhr.open("get", "data/data.json", true)
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && (/^2\d{2}$/.test(xhr.status))) {
                 data = utils.toJSON(xhr.responseText)
+                for (var i = 0; i < data.length; i++) {
+                    var frag = document.createDocumentFragment();
+                    var obj = data[i]
+                    for (var attr in obj) {
+                        var oA = document.createElement("a")
+                        oA.innerHTML = obj[attr]
+                        frag.appendChild(oA)
+                    }
+                    oLis[i].appendChild(frag)
+                }
             }
         }
+
         xhr.send(null)
         console.log(data)
-        for (var i = 0; i < data.length; i++) {
-            var frag = document.createDocumentFragment();
-            var obj = data[i]
-            for (var attr in obj) {
-                var oA = document.createElement("a")
-                oA.innerHTML = obj[attr]
-                frag.appendChild(oA)
-            }
-            oLis[i].appendChild(frag)
-        }
+
     }
     function loginjs(){
         var login=document.getElementById("login")

@@ -1368,6 +1368,7 @@ a:hover {
     width: 80px;
     font-size: 14px;
     text-align: center;
+    margin: 3px 0px;
 }
 .link{
     background-color: white;
